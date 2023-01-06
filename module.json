@@ -1,0 +1,18 @@
+{
+    "alias": "auto-document-number",
+    "icon": "fa fa-cog",
+    "version": "1.0.0",
+	"category": "accounting",
+    "active": 1,
+    "providers": [
+        "Modules\\AutoDocumentNumber\\Providers\\Event",
+        "Modules\\AutoDocumentNumber\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "reports": [],
+    "widgets": [],
+    "settings": [],
+    "extra-modules": {}
+}
