@@ -31,7 +31,7 @@ class DocumentCreatingListener
             if($documentNumber < 0 && $event->request['type'] == 'invoice'){
                 $event->request['document_number'] = $this->getNextDocumentNumber(Document::INVOICE_TYPE);
 
-            }else if($documentNumber < 0){
+            }else if($documentNumber < 0 && $event->request['type'] == 'bill'){
                 $event->request['document_number'] = $this->getNextDocumentNumber(Document::BILL_TYPE);
             }
 

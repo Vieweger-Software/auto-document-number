@@ -2,7 +2,10 @@
 
 namespace Modules\AutoDocumentNumber\Providers;
 
+use App\Http\Controllers\Api\Document\Documents;
 use Illuminate\Support\ServiceProvider as Provider;
+use Illuminate\Support\Facades\Route;
+use Modules\AutoDocumentNumber\Http\Middleware\DocumentLinkMiddleware;
 
 class Main extends Provider
 {
@@ -24,6 +27,9 @@ class Main extends Provider
     public function boot()
     {
 
+        //add DocumentLinkMiddleware
+        Route::get('api/documents/{document}', [Documents::class, 'show'])
+            ->middleware(['api', 'date.format', 'money', 'dropzone', DocumentLinkMiddleware::class]);
     }
 
     /**

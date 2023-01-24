@@ -6,7 +6,8 @@
     "active": 1,
     "providers": [
         "Modules\\AutoDocumentNumber\\Providers\\Event",
-        "Modules\\AutoDocumentNumber\\Providers\\Main"
+        "Modules\\AutoDocumentNumber\\Providers\\Main",
+        "Modules\\AutoDocumentNumber\\Providers\\Observer"
     ],
     "aliases": {},
     "files": [],
