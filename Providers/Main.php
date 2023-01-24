@@ -29,6 +29,7 @@ class Main extends Provider
 
         //add DocumentLinkMiddleware
         Route::get('api/documents/{document}', [Documents::class, 'show'])
+            ->name('api.documents.show')
             ->middleware(['api', 'date.format', 'money', 'dropzone', DocumentLinkMiddleware::class]);
     }
 
